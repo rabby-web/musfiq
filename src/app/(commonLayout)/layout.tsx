@@ -1,6 +1,5 @@
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
-import { authOptions } from "@/utils/authOptions";
 import { getServerSession } from "next-auth";
 import { Fragment, ReactNode } from "react";
 
@@ -9,7 +8,7 @@ type CommonLayoutProps = {
 };
 
 export default async function CommonLayout({ children }: CommonLayoutProps) {
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession();
 
   return (
     <Fragment>

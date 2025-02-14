@@ -1,6 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { authOptions } from "@/utils/authOptions";
 import { getServerSession } from "next-auth";
 
 export default async function DashboardLayout({
@@ -8,7 +7,7 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession();
   // console.log(session);
 
   return (
