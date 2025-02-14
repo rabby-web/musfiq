@@ -23,7 +23,7 @@ export default function LoginPage() {
             <button
               onClick={() =>
                 signIn("google", {
-                  callbackUrl: "/dashboard",
+                  callbackUrl: "https://musfiq.vercel.app/dashboard",
                 })
               }
               className="w-full"
@@ -37,7 +37,7 @@ export default function LoginPage() {
             <button
               onClick={() =>
                 signIn("github", {
-                  callbackUrl: "/dashboard",
+                  callbackUrl: "https://musfiq.vercel.app/dashboard",
                 })
               }
               className="w-full"
